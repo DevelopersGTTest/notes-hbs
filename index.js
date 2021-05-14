@@ -1,6 +1,7 @@
 'use strict'
 // continue learn... https://github.com/WaelYasmina/handlebars-guide
 // axios link = https://www.npmjs.com/package/axios
+// guide = https://github.com/accimeesterlin/express-handlebars-full-example
 
 const handlebars = require('express-handlebars')
 const config = require('./config')
