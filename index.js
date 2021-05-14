@@ -9,11 +9,10 @@ app.set('view engine', 'hbs');
 //instead of app.engine('handlebars', handlebars({
 app.engine('hbs', handlebars({
     layoutsDir: __dirname + '/views/layouts',
-    //new configuration parameter
     extname: 'hbs'
 }));
 
-app.use(express.static('views'))
+app.use(express.static('public'))
 
 app.get('/', (req, res) => {
     /***
