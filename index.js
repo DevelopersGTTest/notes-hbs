@@ -1,12 +1,13 @@
+'use strict'
+// continue learn... https://github.com/WaelYasmina/handlebars-guide
+
 const handlebars = require('express-handlebars')
+const config = require('./config')
 const express = require('express')
 const app = express()
 
-const P = 3000;
-
 app.set('view engine', 'hbs');
 
-//instead of app.engine('handlebars', handlebars({
 app.engine('hbs', handlebars({
     layoutsDir: __dirname + '/views/layouts',
     extname: 'hbs'
@@ -24,6 +25,6 @@ app.get('/', (req, res) => {
 });
     
 
-app.listen(P, ()=>{
-    console.log(`server listen on ${P}`)
+app.listen(config.port, ()=>{
+    console.log(`server listen on ${config.port}`)
 });
